@@ -1,3 +1,14 @@
+<?php
+// get what we need
+require_once('controller/StatusController.php');
+require_once('core/Status.php');
+require_once('core/View.php');
+
+// send $_GET and $_POST as $request to controller
+$request = array_merge($_GET, $_POST);
+$controller = new StatusController($request);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +26,9 @@
 </head>
 <body>
 <h1>MariaDB MaxScale Status</h1>
-
+<!-- display template data -->
+<?php
+echo $controller->indexAction();
+?>
 </body>
 </html>

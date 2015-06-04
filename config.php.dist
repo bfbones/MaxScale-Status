@@ -1,0 +1,27 @@
+<?php
+// global configuration file
+//
+
+/* host: enter hostname or IP for telnet-access to maxscale
+your maxscale should be configurated like this:
+  [Debug Listener]
+  type=listener
+  service=Debug Interface
+  protocol=telnetd
+  address=xx.xx.xx.xx
+  port=XXXX
+*/
+public $host = '127.0.0.1';
+public $port = 4442;
+
+/* login credentials
+set them up by logging in to maxscale:
+telnet xx.xx.xx.xx XXXX
+standart login is 'admin' and 'skysql'
+add user:
+> add user NAME PASSWORD
+*/
+
+public $username = 'NAME';
+public $password = 'PASSWORD';
+
